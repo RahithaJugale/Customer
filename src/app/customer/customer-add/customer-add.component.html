@@ -1,0 +1,70 @@
+
+
+<div class="container bg-dark bg-gradient rounded" id="addCustomerContainer">
+    <a href="#" class="text-white" (click)="gotoCustomer()"><i class="fa fa-arrow-left float-left"></i></a>
+    <div class="row">
+        <h3 class="text-center text-light p-4">Add New Customer</h3>
+    </div>
+    <div class="container rounded w-50">
+        <form [formGroup]="addCustomerForm" autocomplete="off" (ngSubmit)="submitDetails()">
+            <div class="row bg-light rounded">
+                <div class="col-4 m-auto">
+                    <label class="form-label"><b>Customer Name</b></label>
+                </div>
+                <div class="col">
+                    <!-- customerName -->
+                    <input type="text" placeholder="Enter Customer name" class="form-control" required
+                    formControlName="customerName"> 
+                    
+                </div>
+            </div>
+            <div class="row">
+                <!-- Validation -->
+                <div *ngIf="isSubmitted && formControls.customerName.errors" class="text-danger">
+                    <div *ngIf="formControls.customerName.errors.required">
+                        <p>Customer Name is required!</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row bg-light mt-3 rounded">
+                <div class="col-4">
+                    <label class="form-label m-auto"><b>Address</b></label>
+                </div>
+                <div class="col">
+                    <!-- address -->
+                    <textarea placeholder="Enter Address" rows="2" cols="20" class="form-control" required
+                    formControlName="address"> </textarea>
+                    
+                </div>
+
+            </div>
+
+            <div class="row">
+                <!-- Validation -->
+                <div *ngIf="isSubmitted && formControls.address.errors" class="text-danger">
+                    <div *ngIf="formControls.address.errors.required">
+                        <p>Address is required!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- isActive -->
+            <div class="row mt-3 rounded">
+                <div class="col d-flex justify-content-end ">
+                    <div class="form-check">
+                        <label class="form-label text-light"><b>Is Active</b></label>
+                        <input type="checkbox" class="form-check-input" formControlName="isActive">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="row mt-4">
+                <button class="btn btn-secondary" type="submit"><b>Submit</b></button>
+            </div>
+
+        </form>
+    </div>
+</div>

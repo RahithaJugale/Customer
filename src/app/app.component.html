@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <nav class="navbar navbar-expand bg-dark bg-gradient rounded">
+        <div class="row w-100">
+          <div class="col-2">
+            <div class="navbar-brand" id="customerimage">
+              <img src="../assets/img/customerIcon.png">
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="navbar-brand">
+              <h4 class="pt-2 text-white">Customer and Sales</h4>
+            </div>
+          </div>
+          <div class="col-5 m-auto d-flex justify-content-end">
+            <ul class="navbar-nav mr-auto">
+              <!-- <li class="nav-item text-white">
+                <a href="#" role="button" class="btn btn-light">
+                  <span><i class="fa fa-home"></i></span>
+                  Home
+                </a>
+              </li> -->
+              <li class="nav-item text-white ms-2">
+                <a href="login" role="button" class="btn btn-light">
+                  <span><i class="fa fa-sign-in"></i></span>
+                  Login
+                </a>
+              </li>
+              <li class="nav-item text-white ms-2">
+                <a href="#" role="button" class="btn btn-light">
+                  <span><i class="fa fa-sign-in"></i></span>
+                  Log Out
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <hr>
+      <img src="assets/img/loginpagebg.jpg" alt="background-image" id="loginpagebg" class="opacity-50">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
